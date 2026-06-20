@@ -1,164 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Modern Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-  <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
+    <h1 class="display-3 text-center mt-5">Weather Application</h1>
 
-      <div class="logo">Portfolio</div>
+    <div class="container weather-container">
+        <div class="row">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="cityInput" placeholder="City Name">
+                <label for="cityInput">City Name</label>
+            </div>
 
-      <ul class="nav-links">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact Form</a></li>
-        <li><a href="#info">Personal Info</a></li>
-      </ul>
+            <div>
+                <button class="btn btn-primary w-100 mt-3" onclick="getWeatherData()">
+                    Search Weather
+                </button>
+            </div>
 
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-
-    <div class="hero-text">
-
-      <h1>Prasad Godase</h1>
-
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Voluptatibus provident laborum, saepe molestiae odit,
-        sequi maiores ratione.
-      </p>
-
-      <button>Click me for more Info</button>
-
-    </div>
-
-    <div class="hero-image">
-      <img src="./prasad.jpg.jpg">
-    </div>
-
-  </section>
-
-  <!-- Projects -->
-  <section class="projects" id="projects">
-
-    <h2>My Projects</h2>
-
-    <div class="project-container">
-
-      <div class="card">
-
-        <img src="https://picsum.photos/300/200" alt="project">
-
-        <h3>Portfolio Website</h3>
-
-        <p>Description is this project details</p>
-
-        <div class="buttons">
-          <button>Live Demo</button>
-          <button>Source Code</button>
+            <div id="dataResult" class="mt-4"></div>
         </div>
-
-      </div>
-
-      <div class="card">
-
-        <img src="https://picsum.photos/301/200" alt="project">
-
-        <h3>Weather App</h3>
-
-        <p>Description is this project details</p>
-
-        <div class="buttons">
-          <button>Live Demo</button>
-          <button>Source Code</button>
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <img src="https://picsum.photos/302/200" alt="project">
-
-        <h3>Student Management System</h3>
-
-        <p>Description is this project details</p>
-
-        <div class="buttons">
-          <button>Live Demo</button>
-          <button>Source Code</button>
-        </div>
-
-      </div>
-
     </div>
 
-  </section>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
-
-    <h2>Contact Me</h2>
-
-    <div class="contact-box">
-
-      <form>
-
-        <input type="text" placeholder="Enter your Name">
-
-        <input type="email" placeholder="name@gmail.com">
-
-        <textarea rows="8" placeholder="Your message"></textarea>
-
-        <div class="radio-group">
-          <label><input type="radio" name="connect"> Connect via Phone</label>
-
-          <label><input type="radio" name="connect"> Connect via Email</label>
-        </div>
-
-        <button type="submit">Submit</button>
-
-      </form>
-
-    </div>
-
-  </section>
-
-  <!-- Personal Info -->
-  <section class="info" id="info">
-
-    <h2>Personal Info</h2>
-
-    <div class="info-box">
-
-      <p><strong>Name :</strong> Prasad Godase</p>
-      <p><strong>Email :</strong> prasadgodase56@gmail.com</p>
-      <p><strong>Address :</strong> Pune, Maharashtra</p>
-
-    </div>
-
-  </section>
-
+    <script src="script.js"></script>
 </body>
 </html>
